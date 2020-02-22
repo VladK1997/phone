@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'a_FuturaOrto';
+    src: url('subset-AFuturaOrtoBold.eot');
+    src: url('subset-AFuturaOrtoBold.eot?#iefix') format('embedded-opentype'),
+        url('subset-AFuturaOrtoBold.woff2') format('woff2'),
+        url('subset-AFuturaOrtoBold.woff') format('woff'),
+        url('subset-AFuturaOrtoBold.ttf') format('truetype'),
+        url('subset-AFuturaOrtoBold.svg#AFuturaOrtoBold') format('svg');
+    font-weight: bold;
+    font-style: italic;
+}
+

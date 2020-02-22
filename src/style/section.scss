@@ -1,0 +1,23 @@
+.section{
+  margin: 24px 0;
+  &__title{
+    width: 100%;
+    padding: 64px 0;
+    @extend %futuraTitle;
+    font-size: 30px;
+    position: relative;
+    text-align: center;
+  }
+  &__title-img{
+    position: absolute;
+    z-index: -1;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 82.2%;
+    padding-top: 13.18%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+}

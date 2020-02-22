@@ -1,0 +1,71 @@
+.header{
+  position: relative;
+  padding-top: 8px;
+  display: flex;
+  justify-content: space-between;
+  &__logo{
+    display: block;
+    max-width: 311px;
+    width: 100%;
+  }
+  &__auth{
+    margin-top: 64px;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 440px;
+    justify-content: space-between;
+    .cust-btn{
+      font-size: 18px;
+      border-width: 2px;
+    }
+  }
+  &__auth-text{
+    width: 100%;
+    margin-top: 16px;
+    text-align: center;
+    span{
+      display: block;
+      font-size: 20px;
+      margin-top: 8px;
+    }
+
+  }
+  &__leave-1{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    left: 0;
+    top: 32px;
+    width: 42.5%;
+    padding-top: 16.45%;
+    z-index: -1;
+  }
+  &__leave-2{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 58%;
+    padding-top: 14.5%;
+    z-index: -1;
+  }
+  &__contact{
+    position: absolute;
+    top: 8px;
+    left: 7%;
+    display: flex;
+  }
+  &__contact-item{
+    font-size: 18px;
+    &:not(:last-child){
+      margin-right: 16px;
+    }
+    text-decoration: none;
+    color: $main-grey;
+    display: flex;
+    align-items: center;
+  }
+}

@@ -1,0 +1,23 @@
+$main-blue: #364c9f;//#0015d3//353535
+$second-blue:#d7e1fd;
+$main-green:#41b64d;//#35b729
+$second-green: #7acc82;
+$third-green: #caf7ca;
+$main-red: #891408;//#35b729
+$main-grey: #302f2f;
+$main-medium-grey: #7d7c7c;
+$main-border-color: #c6c5c5;
+$main-light-grey: #e1dfe5;
+$main-lighten-grey: #e9ecef;
+$main-blueHover: lighten($main-blue,20);
+$main-greenHover: darken($main-green,10);
+$path:"../dist/img";
+
+
+
+
+$desktopXSwidth:      1300px;
+$tablet-width:        1200px;
+$small-tablet-width:  992px;
+$mobile-Width:		  767px;
+$mobileXsWidth: 	  576px;

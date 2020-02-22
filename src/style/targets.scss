@@ -1,0 +1,40 @@
+.targets{
+  &__img{
+    max-height: 156px;
+    max-width: 135px;
+    margin-right: 24px;
+  }
+  &__item{
+    display: flex;
+    align-items: center;
+    transition: 1s;
+    opacity: 0;
+    transform: translate3d(-90%,0,0);
+    &:nth-of-type(2n){
+      flex-direction: row-reverse;
+      text-align: right;
+      transform: translate3d(90%,0,0);
+    }
+    &:not(:last-child){
+      margin-bottom: 16px;
+    }
+
+  }
+  &.appeared &__item{
+    transform: translate3d(0,0,0);
+    opacity: 1;
+  }
+  &__item:nth-of-type(2n) &__img{
+    margin-right: 0;
+    margin-left: 24px;
+  }
+  &__title{
+    font-size: 24px;
+    @extend %futuraTitle;
+    margin-bottom: 8px;
+  }
+  &__text{
+    font-size: 22px;
+    line-height: 1.2;
+  }
+}

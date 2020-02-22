@@ -1,0 +1,107 @@
+.text{
+  color: inherit;
+  font-family: "SourceSansPro", Arial,sans-serif;
+  &-xs{
+    font-size: 12px;
+  }
+  &-sm{
+    font-size: 14px;
+  }
+  &-md{
+    font-size: 18px;
+  }
+  &-lg{
+    font-size: 20px;
+  }
+  &-xl{
+    font-size: 22px;
+  }
+  &-h1{
+    font-size: 40px;
+  }
+  &-h2{
+    font-size: 36px;
+  }
+  &-h{
+    font-family: "aFuturaOrto",Arial, sans-serif;
+    font-weight: 600;
+  }
+  &-h3{
+    font-size: 32px;
+  }
+  &-right{
+    text-align: right;
+  }
+  &-h4{
+    font-size: 28px;
+  }
+  &-h5{
+    font-size: 26px;
+  }
+  &-h6{
+    font-size: 24px;
+  }
+  &-xs{
+    font-size: 12px;
+  }
+  &-sm{
+    font-size: 14px;
+  }
+  &-md{
+    font-size: 18px;
+  }
+  &-lg{
+    font-size: 20px;
+  }
+  &-xl{
+    font-size: 24px;
+  }
+  &--up{
+    text-transform: uppercase;
+  }
+  &--white{
+    color: #fff;
+  }
+  &--primary{
+    color: $main-blue;
+  }
+  &-hover{
+    &Primary:hover{
+      color: $main-blue;
+    }
+  }
+  &--nowrap{
+    white-space: nowrap;
+  }
+  &-lh{
+    &-xs{
+      line-height: 1.1;
+    }
+    &-sm{
+      line-height: 1.2;
+    }
+    &-md{
+      line-height: 1.5;
+    }
+    &-lg{
+      line-height: 1.7;
+    }
+    &-xl{
+      line-height: 2;
+    }
+  }
+}
+p.inherit{
+  color: inherit;
+}
+@media all and(max-width: $mobile-Width){
+  .text{
+    &-h1{
+      font-size: 32px;
+    }
+  }
+}
+%futuraTitle{
+  font-family: 'aFuturaOrto',arial,sans-serif;
+  font-weight: 600;
+}

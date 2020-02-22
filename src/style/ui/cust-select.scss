@@ -1,0 +1,50 @@
+.cust-select {
+  width: 100%;
+  position: relative;
+  select{
+    display: none;
+  }
+  &__arrow{
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    color: $second-green;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  &.custom-select--active &__arrow{
+    transform: rotate(180deg) translateY(50%);
+  }
+  .select-selected{
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    height: 48px;
+    border: 3px solid $third-green;
+    border-radius: 5px;
+    padding: 8px;
+    font-size: 18px;
+    i{
+      width: 20px;
+      height: 20px;
+      margin-right: 8px;
+    }
+    &.active{
+    }
+  }
+  .select-items{
+    position: absolute;
+    top: 100%;
+    margin-top: -2px;
+    left: 0;
+    width: 100%;
+    border: 3px solid $third-green;
+    border-top: 0;
+    background-color: #fff;
+    div{
+      padding: 8px 16px;
+      width: 100%;
+    }
+  }
+}

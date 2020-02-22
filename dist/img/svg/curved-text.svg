@@ -1,0 +1,9 @@
+
+<svg viewBox="0 0 500 500">
+<path id="curve" fill="transparent"  d="M48.41126761,88.69815595 C53.15670716,86.70792798 126.11784038,57.11552200 260.29514389,57.50704225 C392.33699961,57.89856251 462.92541304,86.96894148 468.02676056,89.15492958" fill="rgba(0, 0, 0, 1)" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter"/>
+<text width="500">
+        <textPath xlink:href="#curve">
+                Dangerous Curves Ahead
+        </textPath>
+</text>
+</svg>

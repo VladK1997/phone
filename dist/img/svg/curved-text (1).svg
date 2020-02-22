@@ -1,0 +1,8 @@
+<!-- Made in Mondrian.io -->
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="500" xmlns:mondrian="https://mondrian.io/xml">
+<path id="curve" d="M49.53802817,89.50547408 C54.27072517,88.57811819 127.03594158,74.78940032 260.85294930,74.97183099 C392.54024338,75.15426165 462.93911129,88.69973864 468.02676056,89.71830986" fill="rgba(0, 0, 0, 1)" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter"/>
+<g mondrian:type="text" mondrian:x="NaN" mondrian:y="NaN" mondrian:width="200" mondrian:height="50" mondrian:spacing="50" fill="rgba(0, 0, 0, 1)" stroke="none" font-size="12pt" font-family="Times New Roman">
+<text x="NaN" y="NaN" mondrian:width="200" mondrian:height="50" fill="rgba(0, 0, 0, 1)" stroke="none" text-anchor="start">
+        </text>
+</g>
+</svg>
