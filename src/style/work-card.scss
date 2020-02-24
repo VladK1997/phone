@@ -1,0 +1,91 @@
+.work-card{
+  display: flex;
+  width: 100%;
+  align-items: center;
+  &__text-wrap{
+    background-color: $third-green;
+    display: flex;
+    padding: 8px 16px 8px 80px;
+
+    align-items: center;
+    transform: translateX(-80%);
+    transition: 0.8s;
+  }
+  &__text{
+    text-align: left;
+    font-size: 18px;
+    line-height: 1.4;
+    margin-right: 8px;
+  }
+  &__number{
+    font-size: 32px;
+    @extend %futuraTitle;
+  }
+  &__title{
+    width: 40%;
+    position: relative;
+    z-index: 2;
+    flex-shrink: 0;
+    text-align: right;
+    font-size: 20px;
+    @extend %futuraTitle;
+    margin-right: 32px;
+  }
+
+  &.appeared &__text-wrap{
+    transform: none;
+  }
+  &:nth-of-type(1){
+    .work-card{
+      &__text-wrap{
+        margin-left: -32px;
+      }
+    }
+  }
+  &:nth-of-type(2){
+    .work-card{
+      &__title{
+        width: 36%;
+      }
+      &__text-wrap{
+        margin-left: -56px;
+        margin-right: 40px;
+      }
+    }
+  }
+  &:nth-of-type(3){
+    .work-card{
+      &__title{
+        width: 31%;
+      }
+      &__text-wrap{
+        margin-left: -64px;
+        margin-right: 80px;
+      }
+    }
+  }
+  &:nth-of-type(4){
+    .work-card{
+      &__title{
+        width: 26%;
+        margin-left: -8px;
+      }
+      &__text-wrap{
+        margin-left: -56px;
+        margin-right: 120px;
+      }
+    }
+  }
+  &:nth-of-type(5){
+    .work-card{
+      &__title{
+        width: 20%;
+        margin-left: -8px;
+      }
+      &__text-wrap{
+        margin-left: -56px;
+        margin-right: 160px;
+      }
+    }
+  }
+}

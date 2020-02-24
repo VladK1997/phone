@@ -1,0 +1,23 @@
+.toWhom{
+  position: relative;
+  &__title{
+    padding: 64px 0;
+    position: relative;
+  }
+  &__img{
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  &__slider{
+    margin-top: 40px;
+    .swiper-wrapper{
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+}
+@media all and(max-width: $mobile-Width){
+  .toWhom{
+  }
+}

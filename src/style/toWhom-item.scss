@@ -1,0 +1,52 @@
+.toWhom-item{
+  width: 32%;
+  padding: 0 16px;
+  text-align: center;
+  &__img{
+    min-width: 1px;
+    min-height: 1px;
+    display: block;
+    margin: 0 auto;
+    max-width: 140px;
+    max-height: 130px;
+    object-fit: contain;
+    object-position: center;
+  }
+  &__title{
+    font-size: 20px;
+    @extend %futuraTitle;
+    margin: 16px;
+  }
+  &__text{
+    font-size: 18px;
+    line-height: 1.5;
+  }
+  &:not(:nth-of-type(3n)){
+    margin-right: 16px;
+  }
+  &:nth-of-type(n+4){
+    margin-top: 48px;
+  }
+  &:nth-of-type(4){
+    margin-left: 10%;
+  }
+  &:nth-of-type(5){
+    margin-right: 10%;
+  }
+}
+@media all and(max-width: $small-tablet-width){
+  .toWhom-item{
+    width: 49%;
+    &:nth-of-type(n){
+      margin:0;
+    }
+    &:nth-of-type(n+3){
+    margin-top: 32px;
+    }
+    &:not(:nth-of-type(2n)){
+      margin-right: 2%;
+    }
+  }
+}@media all and(max-width: $mobile-Width){
+
+}

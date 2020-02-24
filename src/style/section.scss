@@ -7,6 +7,12 @@
     font-size: 30px;
     position: relative;
     text-align: center;
+    &--2{
+      padding: 16px 8px;
+      background-color: $third-green;
+
+
+    }
   }
   &__title-img{
     position: absolute;
@@ -19,5 +25,8 @@
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
+  }
+  &__howItWorks{
+    margin-top: 48px;
   }
 }

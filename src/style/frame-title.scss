@@ -1,0 +1,126 @@
+.frame-title{
+  position: relative;
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 440px;
+  width: 100%;
+  padding: 64px;
+  height: 156px;
+  overflow: hidden;
+  animation: frameTitleAnim linear 13s forwards infinite;
+  &:after,&:before {
+    animation: frameTitleBorder linear 13s forwards infinite;
+  }
+  &__text{
+    animation: frameTitleTextHid linear 13s forwards infinite;
+  }
+  &__wrap{
+    min-height: 156px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &:after,&:before{
+    position: absolute;
+    width:  116px;
+    height: 116px;
+    border: 16px solid #745180;
+    content: '';
+  }
+  &:after{
+    top: 0;
+    left: 0;
+    border-bottom-color: transparent;
+    border-right-color: transparent;
+  }
+  &:before{
+    bottom: 0;
+    right: 0;
+    border-top-color: transparent;
+    border-left-color: transparent;
+  }
+  &__text{
+    font-size: 30px;
+    white-space: nowrap;
+    @extend %futuraTitle;
+    text-align: center;
+    width: 344px;
+  }
+}
+@keyframes frameTitleAnim {
+  0%{
+    max-width: 128px;
+    height: 128px;
+  }
+  16%{
+    max-width: 128px;
+    height: 128px;
+  }
+  18%{
+    max-width: 440px;
+    height: 156px;
+  }
+  92%{
+    max-width: 440px;
+    height: 156px;
+  }
+  95%{
+    height: 128px;
+    max-width: 128px;
+  }
+  100%{
+    height: 128px;
+    max-width: 128px;
+  }
+}
+@keyframes frameTitleTextHid {
+  0%{
+    opacity: -0.9;
+  }
+  16%{
+    opacity: -0.9;
+  }
+  18%{
+    opacity: 1;
+  }
+  92%{
+    opacity: 1;
+  }
+  95%{
+    opacity: -0.9;
+  }
+  100%{
+    opacity: -0.9;
+  }
+}
+@keyframes frameTitleBorder {
+  0%{
+    width: 100px;
+    height: 100px;
+  }
+  16%{
+    width: 100px;
+    height: 100px;
+  }
+  18%{
+    width: 100px;
+    height: 100px;
+  }
+  92%{
+    width: 100px;
+    height: 100px;
+  }
+  95%{
+    width: 100px;
+    height: 100px;
+
+  }
+  100%{
+    width: 100px;
+    height: 100px;
+
+  }
+}

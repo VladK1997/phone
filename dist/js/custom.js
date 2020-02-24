@@ -1,62 +1,76 @@
+/**
+ * Zvonilovo landing
+ *
+ * Frontend developer: Vladyslav Kukhlii
+ *
+ * Released on: February 25, 2020
+ */
+
 (function () {
+    var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
+        window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+    var cancelAnimationFrame = window.cancelAnimationFrame || window.mozCancelAnimationFrame;
     let opportCanvas = document.getElementById('opport');
     let balls = [];
     let iterator = 0;
     let ctx = opportCanvas.getContext("2d");
     const colors =['#805083','#6bc273','#caf7ca'];
     const minMax = [-1,1];
-    let maxDev = 30;
+    const maxDev = 30;
     let pauseTime = 5000;//time between animation, for imaged dots
-    let pauseTimeHidden = 500;//dots hidden,for this time, after this iinterval will start animation
-    let centerX = opportCanvas.offsetWidth/7;
-    let centerY = opportCanvas.offsetHeight/7;
-    let startInt;
-    let backInt;
-    let frame;
+    let pauseTimeHidden = 1000;//dots hidden,for this time, after this iinterval will start animation
+    opportCanvas.width = opportCanvas.offsetWidth;
+    opportCanvas.height = opportCanvas.offsetHeight;
+    let canvasWidth = opportCanvas.width;
+    let canvasHeight = opportCanvas.height;
+    let centerX =  canvasWidth/2;
+    let centerY = canvasHeight/2;
+    let currentFrame;
+    let currentInterval;
+    let currentTimeOut;
+    let currentFunc = '';
     function startIntFunc() {
         for(let i = 0,l = 50; i < l; i++){
             balls.push({
                 color: colors[Math.round(Math.random() * 2)],
-                size: Math.round(Math.random() * 4),
-                xCord: Math.round(Math.random() * opportCanvas.offsetWidth/7 * minMax[Math.round(Math.random()*1)]),
-                yCord: Math.round(Math.random() * opportCanvas.offsetHeight/7 * minMax[Math.round(Math.random()*1)])
+                size: Math.round(Math.random() * 16),
+                xCord: Math.round(Math.random() * centerX * minMax[Math.round(Math.random()*1)]),
+                yCord: Math.round(Math.random() * centerY * minMax[Math.round(Math.random()*1)])
             })
         }
         opportCanvas.style.opacity = 1;
-        startInt = setInterval(function () {
-            frame = window.requestAnimationFrame(drawStart);
+        currentInterval = setInterval(function () {
+            currentFrame = requestAnimationFrame(drawStart);
         },maxDev);
     }
     function backIntFunc() {
-        backInt = setInterval(function(){
-            frame = window.requestAnimationFrame(drawBack);
+        currentInterval = setInterval(function(){
+            currentFrame = requestAnimationFrame(drawBack);
         } ,maxDev);
     }
-
     function drawStart(){
-        if(iterator <= maxDev){
-            ctx.clearRect(0, 0, opportCanvas.offsetWidth, opportCanvas.offsetHeight);
-            // console.log(opportCanvas.offsetWidth,centerX);
+        currentFunc = 'start';
+        if(iterator < maxDev){
+            ctx.clearRect(0, 0, canvasWidth, canvasHeight);
             for (let i = 0,l = balls.length; i < l; i++){
                 ctx.beginPath();
                 ctx.arc(centerX + (balls[i].xCord/maxDev*iterator), centerY +(balls[i].yCord/maxDev)*iterator, balls[i].size, 360, Math.PI * 2, true);
                 ctx.fillStyle = balls[i].color;
                 ctx.fill();
             }
-            iterator++;
-            console.log(maxDev);
+            ++iterator;
         }else {
-            clearInterval(startInt);
-            cancelAnimationFrame(frame);
-            setTimeout(function (){
+            clearInterval(currentInterval);
+            cancelAnimationFrame(currentFrame);
+            currentTimeOut = setTimeout(function (){
                 backIntFunc();
             },pauseTime);
         }
     }
     function drawBack() {
-        if(iterator > 0){
-            ctx.clearRect(0, 0, opportCanvas.offsetWidth, opportCanvas.offsetHeight);
-            // console.log(opportCanvas.offsetWidth,centerX);
+        currentFunc = 'back';
+        if(iterator > 1){
+            ctx.clearRect(0, 0, canvasWidth, canvasHeight);
             for (let i = 0,l = balls.length; i < l; i++){
                 ctx.beginPath();
                 ctx.arc(centerX + (balls[i].xCord/maxDev*iterator), centerY +(balls[i].yCord/maxDev)*iterator, balls[i].size, 360, Math.PI * 2, true);
@@ -64,39 +78,46 @@
                 ctx.fill();
             }
             --iterator;
-            console.log(iterator);
         }else {
-            clearInterval(backInt);
+            clearInterval(currentInterval);
             opportCanvas.style.opacity = 0;
-            cancelAnimationFrame(frame);
-            setTimeout(function (){
+            cancelAnimationFrame(currentFrame);
+            currentTimeOut = setTimeout(function (){
                 balls = [];
                 startIntFunc();
             },pauseTimeHidden);
         }
     }
+    document.addEventListener('visibilitychange',function(){
+        if(document.visibilityState =='hidden'){
+                clearInterval(currentInterval);
+                cancelAnimationFrame(currentFrame);
+                clearTimeout(currentTimeOut);
+        }else{
+            startIntFunc();
+        }
+    });
     startIntFunc();
-    // function draw() {
-    //         for (var i = 0; i < 4; i++) {
-    //             for (var j = 0; j < 3; j++) {
-    //                 ctx.beginPath();
-    //                 var x = 25 + j * 50; // x coordinate
-    //                 var y = 25 + i * 50; // y coordinate
-    //                 var radius = 20; // Arc radius
-    //                 var startAngle = 0; // Starting point on circle
-    //                 var endAngle = Math.PI + (Math.PI * j) / 2; // End point on circle
-    //                 var anticlockwise = i % 2 !== 0; // clockwise or anticlockwise
-    //
-    //                 ctx.arc(x, y, radius, startAngle, endAngle, anticlockwise);
-    //
-    //                 if (i > 1) {
-    //                     ctx.fill();
-    //                 } else {
-    //                     ctx.stroke();
-    //                 }
-    //             }
-    //         }
-    //
-    // }
-
+})();
+(function () {
+    let whomSlider = document.querySelector('.toWhom__slider');
+    if(whomSlider && window.innerWidth < 768) {
+        let articlesSlider = new Swiper(whomSlider, {
+            slidesPerView: 2,
+            slidesPerColumn:2,
+            initialSlide: 0,
+            spaceBetween: 20,
+            autoplay: true,
+            pagination: {
+                el: '.toWhom__pag',
+                clickable: true,
+            },
+            breakpoints: {
+                576: {
+                    slidesPerView: 1,
+                    slidesPerColumn:2,
+                }
+            }
+        });
+    }
 })();
