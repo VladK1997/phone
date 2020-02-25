@@ -38,3 +38,37 @@
     line-height: 1.2;
   }
 }
+@media all and(max-width: $mobile-Width) {
+  .targets{
+    &__img{
+      max-height: 136px;
+      max-width: 105px;
+      margin-right: 12px;
+    }
+    &__title{
+      font-size: 20px;
+    }
+    &__text{
+      font-size: 18px;
+    }
+  }
+}
+@media all and(max-width: $mobileXsWidth) {
+  .targets{
+    &__img{
+      max-height: 116px;
+      max-width: 85px;
+      margin-right: 12px;
+    }
+    &__item:nth-of-type(2n) &__img{
+      margin-right: 0;
+      margin-left: 12px;
+    }
+    &__title{
+      font-size: 18px;
+    }
+    &__text{
+      font-size: 16px;
+    }
+  }
+}

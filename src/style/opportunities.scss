@@ -54,3 +54,41 @@
     transform: translate3d(-50%,-50%,0);
   }
 }
+@media all and(max-width: $small-tablet-width) {
+  .opportunities{
+    &__item{
+      font-size: 19px;
+    }
+  }
+}
+@media all and(max-width: $mobile-Width) {
+  .opportunities{
+    &__item{
+      font-size: 17px;
+      max-width: 240px;
+    }
+  }
+  &__img{
+    width: 140px;
+    height: 140px;
+  }
+}
+@media all and(max-width: $mobileXsWidth) {
+  .opportunities{
+    &__img{
+      width: 120px;
+      height: 120px;
+    }
+    &__row-big,&__row-small{
+      &:not(:last-child){
+        margin: 64px 0;
+      }
+    }
+    &__item {
+      font-size: 14px;
+    }
+    &__row-big &__item{
+      max-width: 25%;
+    }
+  }
+}

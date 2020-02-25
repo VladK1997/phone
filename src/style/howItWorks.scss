@@ -22,3 +22,30 @@
     }
   }
 }
+
+@media all and(max-width: $mobile-Width) {
+  .howItWorks{
+    padding: 40px 2%;
+    margin-left: -2%;
+    margin-right: -2%;
+    &__img{
+      box-shadow: -9px 0 16px 0 rgba(0, 0, 0, 0.1);
+      left: 4%;
+      width: 18%;
+    }
+  }
+}
+@media all and(max-width: $mobileXsWidth) {
+  .howItWorks{
+    &__img{
+      width: 20%;
+    }
+  }
+}
+@media all and(max-width: 380px) {
+  .howItWorks{
+    &__img{
+      display: none;
+    }
+  }
+}

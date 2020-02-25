@@ -30,3 +30,39 @@
     margin-top: 48px;
   }
 }
+@media all and(max-width: $small-tablet-width) {
+  .section {
+    &__title {
+      font-size: 26px;
+    }
+  }
+}
+@media all and(max-width: $mobile-Width) {
+  .section {
+    &__title {
+      font-size: 24px;
+    }
+    &__title-img{
+      left: -10%;
+      right: -10%;
+      width: auto;
+      background-size: 100% 100%;
+      padding-top: 20.18%;
+      transform: translateY(-50%);
+    }
+  }
+}
+@media all and(max-width: $mobileXsWidth) {
+  .section {
+    &__title-img{
+      padding-top: 40%;
+      background-size: 100% 100%;
+    }
+    &__title {
+      font-size: 20px;
+    }
+    &__howItWorks{
+      margin-top: 32px;
+    }
+  }
+}

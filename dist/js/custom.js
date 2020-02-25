@@ -89,11 +89,13 @@
         }
     }
     document.addEventListener('visibilitychange',function(){
+        console.log(document.visibilityState);
         if(document.visibilityState =='hidden'){
-                clearInterval(currentInterval);
-                cancelAnimationFrame(currentFrame);
-                clearTimeout(currentTimeOut);
-        }else{
+            clearTimeout(currentTimeOut);
+            clearInterval(currentInterval);
+            cancelAnimationFrame(currentFrame);
+
+        }else if(document.visibilityState =='visible'){
             startIntFunc();
         }
     });

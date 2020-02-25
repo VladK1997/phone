@@ -1,8 +1,14 @@
 .content{
+
   &__targets{
     margin-top: 24px;
   }
   &__opportunities{
     padding-top: 24px;
+  }
+}
+@media all and(max-width: $mobile-Width){
+  .content{
+    padding-top: 40px;
   }
 }

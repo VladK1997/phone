@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="dist/app.css">
     <link rel="stylesheet" href="dist/font.css">
-    <title>Zvonilovo</title>
+    <title>Zvonilo</title>
 </head>
 <body>
 <div class="d-none">
@@ -41,6 +41,10 @@
             <a href="#" class="header__logo">
                 <span class="logo" style="background-image: url('dist/img/logo.png')"></span>
             </a>
+            <h1 class="page-title">
+                Сервис голосовых рассылок
+                <span>Совершить обзвон всей базы клиентов за 5 минут?</span>
+            </h1>
             <div class="header__auth">
                 <button class="cust-btn cust-btn--rounded cust-btn--md cust-btn--primary">Вход</button>
                 <button class="cust-btn cust-btn--bordered cust-btn--rounded cust-btn--md">Регистрация</button>
@@ -49,12 +53,13 @@
                 </p>
             </div>
         </div>
-
-        <main class="content">
-            <h2 class="page-title">
+    </div>
+    <main class="content">
+        <div class="container container--lg">
+            <h1 class="page-title">
                 Сервис голосовых рассылок
                 <span>Совершить обзвон всей базы клиентов за 5 минут?</span>
-            </h2>
+            </h1>
             <div class="content__contact contact-block">
                 <p class="contact-block__title">Легко!</p>
                 <div class="contact-block__curve" style="background-image: url('dist/img/contentCurve.png')">
@@ -97,7 +102,10 @@
                     <p class="features__item">Возможность интеграции по API</p>
                 </div>
                 <div class="features__img">
-                    <img data-src="dist/img/computer.png" class="lazy lazy-out">
+                    <img src="dist/img/computer.png">
+                </div>
+                <div class="features__img features__img--mob">
+                    <img src="dist/img/computer.png">
                 </div>
             </div>
             <div class="service">
@@ -286,7 +294,7 @@
                 <div class="toWhom">
                     <div class="toWhom__title">
                         <div class="toWhom__img toWhom__img">
-                            <img data-src="dist/img/toWhom.png" class="lazy lazy-out">
+                            <img src="dist/img/toWhom.png">
                         </div>
                         <div class="frame-title__wrap">
                             <div class="frame-title">
@@ -390,7 +398,57 @@
                     </div>
                 </div>
             </section>
-        </main>
+            <section class="section">
+                <div class="proposition">
+                    <img class="proposition__img" src="dist/img/runner.png">
+                    <p class="proposition__title proposition__textBg">
+                            Зарегистрируйся сейчас и получи подарок :
+                            номера твоих потенциальных клиентов, а их целых 200!
+                    </p>
+                    <a href="#" class="proposition__btn cust-btn cust-btn--primaryHover cust-btn--bordered cust-btn--rounded cust-btn--lg">
+                        Регистрация
+                    </a>
+                    <p class="proposition__text proposition__textBg">
+                            У нас вы можете также приобрести Базу данных холодных клиентов.
+                            Номера подбираются по ключевым словам, а значит и шансы на
+                            покупку вашего товари/услуги очень высоки.
+                    </p>
+                    <p class="proposition__price">1 потенциальный клиент - 0,20 гривен</p>
+                </div>
+            </section>
+        </div>
+    </main>
+    <div class="container container--lg">
+        <footer class="footer">
+            <div class="footer__img"></div>
+            <div class="footer__body">
+                <p class="footer__adress">
+                    г. Одесса, Пушкинская
+                </p>
+                <div class="footer__info">
+                    <p class="footer__info-text">
+                        По вопросам<br>
+                        рекламы, партнёрства и<br>
+                        с предложениями : <a class="tel" href="tel:+380506568756">+380506568756</a>
+                    </p>
+                    <div class="footer__contact">
+                        <a href="tel:+0443336026" class="footer__contact-item">
+                            <i class="icon icon--md icon--mr"><svg><use xlink:href="#phone-icon"></use></svg></i>
+                            +0443336026
+                        </a>
+                        <a href="mailto:info@olz.com.ua" class="footer__contact-item">
+                            <i class="icon icon--md icon--mr"><svg><use xlink:href="#mail-icon"></use></svg></i>
+                            info@olz.com.ua
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p class="footer__rights">ТОВ «Коляда Софт». Все права защищены</p>
+                <a href="#" class="footer__logo" style="background-image: url('dist/img/olzboy2.png')">
+                </a>
+            </div>
+        </footer>
     </div>
 </div>
 <script src="dist/js/swiper.min.js"></script>

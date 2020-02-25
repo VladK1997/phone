@@ -19,5 +19,11 @@
 }
 @media all and(max-width: $mobile-Width){
   .toWhom{
+    &__img{
+      top: 50%;
+      left: -10%;
+      right: -10%;
+      transform: translateY(-50%);
+    }
   }
 }

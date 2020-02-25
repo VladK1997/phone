@@ -48,5 +48,9 @@
     }
   }
 }@media all and(max-width: $mobile-Width){
-
+  .toWhom-item {
+    &:nth-of-type(n) {
+      margin: 0;
+    }
+  }
 }

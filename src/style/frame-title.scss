@@ -11,9 +11,6 @@
   height: 156px;
   overflow: hidden;
   animation: frameTitleAnim linear 13s forwards infinite;
-  &:after,&:before {
-    animation: frameTitleBorder linear 13s forwards infinite;
-  }
   &__text{
     animation: frameTitleTextHid linear 13s forwards infinite;
   }
@@ -25,8 +22,8 @@
   }
   &:after,&:before{
     position: absolute;
-    width:  116px;
-    height: 116px;
+    width:  80px;
+    height: 80px;
     border: 16px solid #745180;
     content: '';
   }
@@ -52,28 +49,34 @@
 }
 @keyframes frameTitleAnim {
   0%{
-    max-width: 128px;
-    height: 128px;
+    max-width: 100px;
+    height: 80px;
+    padding: 50px;
   }
   16%{
-    max-width: 128px;
-    height: 128px;
+    max-width: 80px;
+    height: 80px;
+    padding: 50px;
   }
   18%{
     max-width: 440px;
     height: 156px;
+    padding: 64px;
   }
   92%{
     max-width: 440px;
     height: 156px;
+    padding: 64px;
   }
   95%{
-    height: 128px;
-    max-width: 128px;
+    height: 80px;
+    max-width: 80px;
+    padding: 50px;
   }
   100%{
-    height: 128px;
-    max-width: 128px;
+    height: 80px;
+    max-width: 80px;
+    padding: 50px;
   }
 }
 @keyframes frameTitleTextHid {
@@ -96,31 +99,81 @@
     opacity: -0.9;
   }
 }
-@keyframes frameTitleBorder {
-  0%{
-    width: 100px;
-    height: 100px;
+@media all and(max-width: $mobile-Width){
+  .frame-title{
+    max-width: 320px;
+    padding: 50px;
+    &:after,&:before{
+      width:  68px;
+      height: 68px;
+    }
+    &__text{
+      font-size: 24px;
+    }
   }
-  16%{
-    width: 100px;
-    height: 100px;
+  @keyframes frameTitleAnim {
+    0%{
+      max-width: 60px;
+      height: 60px;
+    }
+    16%{
+      max-width: 60px;
+      height: 60px;
+    }
+    18%{
+      max-width: 320px;
+      height: 156px;
+    }
+    92%{
+      max-width: 320px;
+      height: 156px;
+    }
+    95%{
+      height: 60px;
+      max-width: 60px;
+    }
+    100%{
+      height: 60px;
+      max-width: 60px
+    }
   }
-  18%{
-    width: 100px;
-    height: 100px;
+}
+@media all and(max-width: $mobileXsWidth){
+  .frame-title{
+    padding: 32px;
+    &:after,&:before{
+      width:  68px;
+      height: 68px;
+      border-width: 12px;
+    }
+    &__text{
+      font-size: 20px;
+    }
   }
-  92%{
-    width: 100px;
-    height: 100px;
-  }
-  95%{
-    width: 100px;
-    height: 100px;
-
-  }
-  100%{
-    width: 100px;
-    height: 100px;
-
+  @keyframes frameTitleAnim {
+    0%{
+      max-width: 60px;
+      height: 60px;
+    }
+    16%{
+      max-width: 60px;
+      height: 60px;
+    }
+    18%{
+      max-width: 320px;
+      height: 156px;
+    }
+    92%{
+      max-width: 320px;
+      height: 156px;
+    }
+    95%{
+      height: 60px;
+      max-width: 60px;
+    }
+    100%{
+      height: 60px;
+      max-width: 60px
+    }
   }
 }
