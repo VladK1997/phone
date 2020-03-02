@@ -1,0 +1,44 @@
+%scrollBar{
+  scrollbar-width: none;//mozilla
+  &::-webkit-scrollbar {//-webkit-
+    width: 8px !important;
+    margin-right: 8px;
+    background-color: $main-green;
+  }
+  &::-webkit-scrollbar-thumb{
+    background-color: $main-blue;
+    width: 4px;
+    margin: 0 auto;
+  }
+  -ms-overflow-style: none;// IE
+}
+%scrollBarMedium{
+  scrollbar-width: none;//mozilla
+  &::-webkit-scrollbar {//-webkit-
+    width: 16px !important;
+    margin-right: 8px;
+    background-color: $main-green;
+  }
+  &::-webkit-scrollbar-thumb{
+    background-color: $main-blue;
+    width: 4px;
+    margin: 0 auto;
+    border-radius: 4px;
+    transform: translateY(2);
+  }
+  -ms-overflow-style: none;// IE
+}
+%scrollBarSecond{
+  scrollbar-width: none;//mozilla
+  &::-webkit-scrollbar {//-webkit-
+    width: 8px !important;
+    margin-right: 8px;
+    background-color: $main-medium-grey;
+  }
+  &::-webkit-scrollbar-thumb{
+    background-color: $main-green;
+    width: 4px;
+    margin: 0 auto;
+  }
+  -ms-overflow-style: none;// IE
+}

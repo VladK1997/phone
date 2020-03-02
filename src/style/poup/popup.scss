@@ -64,7 +64,8 @@
     max-height: 100%;
     transition: 0.3s;
     border-radius: 3px;
-    overflow: hidden;
+    @extend %scrollBar;
+    overflow: auto;
     box-shadow: 0 12px 50px 10px rgba(#000,0.8);
 
   }

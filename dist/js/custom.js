@@ -142,7 +142,8 @@
         window.addEventListener("click",function(e){
             if (e.target.hasAttribute(revPopOpenBtnAttr)){
                 openPopup(revPop);
-                img.src = e.target.src;
+                console.log(e.target.dataset);
+                img.src = e.target.dataset.revopenbtnattr;
             }
         })
     }
