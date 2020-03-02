@@ -123,3 +123,33 @@
         });
     }
 })();
+(function () {
+    const revPop = document.getElementById("revPop");
+    const revPopOpenBtnAttr = "data-revOpenBtnAttr";
+    let ClosePopup = function (popup) {
+        let self = this;
+        if(popup){
+            self.popup = popup;
+            self.popup.addEventListener("click", function(e){
+                if(e.target.hasAttribute("data-closepopup")){
+                    self.popup.classList.remove("active");
+                }
+            })
+        }
+    }
+    if(revPop){
+        let img = revPop.querySelector('img');
+        window.addEventListener("click",function(e){
+            if (e.target.hasAttribute(revPopOpenBtnAttr)){
+                openPopup(revPop);
+                img.src = e.target.src;
+            }
+        })
+    }
+    function openPopup(popup){
+        popup.classList.add("active");
+    }
+    if(revPop){
+        let userAgreePopup = new ClosePopup(revPop)
+    }
+})();

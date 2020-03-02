@@ -1,0 +1,18 @@
+.reviews{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  &__item{
+    transition: 0.5s;
+    img{
+      width: 100%;
+      object-fit: contain;
+    }
+    width: 26%;
+    box-shadow: 0 0 12px 0 rgba(#000,0.3);
+    &:hover{
+      transform: scale(1.1);
+    }
+  }
+
+}
