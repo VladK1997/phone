@@ -98,3 +98,18 @@
     }
   }
 }
+@media all and(max-width: 420px){
+  .features{
+    &__img {
+      top:0;
+      &--mob {
+        display: block;
+        top: 60%;
+        right: auto;
+        left: 0;
+        bottom: auto;
+        transform: translate(-50%, 0%);
+      }
+    }
+  }
+}
