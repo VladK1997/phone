@@ -15,21 +15,21 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    width: 89.5%;
+    width: 96.5%;
     padding-top: 18%;
     bottom: -8px;
-    left: 0;
+    left: -18%;
     z-index: -1;
-    /*&:after{
+    &:after{
       position: absolute;
-      height: 70%;
+      height: 63.5%;
       width: 100vw;
       background-color: $third-green;
       right: 100%;
-      margin-right: -3px;
-      bottom:0.3%;
+      margin-right: -5px;
+      bottom:2%;
       content: '';
-    }*/
+    }
   }
   &__phone{
     position: relative;
