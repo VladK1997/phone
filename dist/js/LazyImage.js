@@ -1,6 +1,5 @@
 (function(){
     let checkImgId = document.getElementById("checkImgId");
-
         let img = "data:image/webp;base64,UklGRjIAAABXRUJQVlA4ICYAAACyAgCdASoCAAEALmk0mk0iIiIiIgBoSygABc6zbAAA/v56QAAAAA==";
         let webpEnable = false;
     if(checkImgId) {
@@ -19,10 +18,12 @@
                         e.forEach(function (e) {
                             if (e.isIntersecting) {
                                 let n = e.target;
-                                if(webpEnable && n.dataset.webpsrc && n.dataset.webpsrc.length > 0){
-                                    n.setAttribute("src", n.dataset.webpsrc)
-                                }else{
-                                    n.setAttribute("src", n.dataset.src)
+                                if(n.hasAttribute('data-src')){
+                                    if(webpEnable && n.dataset.webpsrc && n.dataset.webpsrc.length > 0){
+                                        n.setAttribute("src", n.dataset.webpsrc)
+                                    }else{
+                                        n.setAttribute("src", n.dataset.src)
+                                    }
                                 }
                                 setTimeout(function () {
                                     n.classList.remove("lazy-out");
